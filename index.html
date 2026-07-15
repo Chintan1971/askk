@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Small Question</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="icon">❤</div>
+
+        <h1>
+            Would you like
+            <br>
+            to go out with me?
+        </h1>
+
+        <p class="subtitle">
+            Pick a day, a meal, and a place.
+            I'll take care of the rest.
+        </p>
+
+        <!-- DAY -->
+
+        <div class="section">
+
+            <h2>Day</h2>
+
+            <div class="choices" id="days">
+
+                <button class="choice active" data-group="day">
+                    Saturday
+                </button>
+
+                <button class="choice" data-group="day">
+                    Sunday
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MEAL -->
+
+        <div class="section">
+
+            <h2>Meal</h2>
+
+            <div class="choices" id="meal">
+
+                <button class="choice active" data-group="meal">
+                    Lunch
+                </button>
+
+                <button class="choice" data-group="meal">
+                    Dinner
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- FOOD -->
+
+        <div class="section">
+
+            <h2>Food</h2>
+
+            <div class="choices" id="food">
+
+                <button class="choice active" data-group="food">
+                    🍛 Biryani
+                </button>
+
+                <button class="choice" data-group="food">
+                    🍽️ Thali
+                </button>
+
+                <button class="choice" data-group="food">
+                    🍝 Pasta
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- AREA -->
+
+        <div class="section">
+
+            <h2>Area</h2>
+
+            <div class="choices" id="area">
+
+                <button class="choice active" data-group="area">
+                    📍 Anywhere
+                </button>
+
+                <button class="choice" data-group="area">
+                    📍 Koramangala
+                </button>
+
+                <button class="choice" data-group="area">
+                    📍 RR Nagar
+                </button>
+
+                <button class="choice" data-group="area">
+                    📍 Majestic
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SUMMARY -->
+
+        <div class="summary">
+
+            <h3>Your Perfect Plan</h3>
+
+            <p id="summaryText">
+                Saturday • Lunch • 🍛 Biryani • 📍 Anywhere
+            </p>
+
+        </div>
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="actions">
+
+            <button class="primary" id="yesBtn">
+                🧡 Yes, I'd love that
+            </button>
+
+            <button class="secondary" id="laterBtn">
+                🤎 Maybe — let's plan another day
+            </button>
+
+            <button class="ghost" id="knowBtn">
+                ⚪ I'll let you know
+            </button>
+
+        </div>
+
+        <div class="footer">
+
+            made with courage, sent with hope
+
+            <br><br>
+
+            <span>— Chintan</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS MODAL -->
+
+<div class="modal hidden" id="modal">
+
+    <div class="modal-card">
+
+        <div class="modal-heart">❤</div>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalMessage"></p>
+
+        <button id="closeModal">
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
