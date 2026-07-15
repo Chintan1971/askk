@@ -87,7 +87,7 @@ closeModal.onclick = () => {
 
 document
 .getElementById("yesBtn")
-.addEventListener("click", ()=>{
+.addEventListener("click", async ()=>{
     await saveResponse("Yes");
     modal.classList.remove("hidden");
 
@@ -120,7 +120,7 @@ document
 
 document
 .getElementById("laterBtn")
-.addEventListener("click", ()=>{
+.addEventListener("click", async ()=>{
     await saveResponse("Later");
     modal.classList.remove("hidden");
 
@@ -154,7 +154,7 @@ document
 
 document
 .getElementById("knowBtn")
-.addEventListener("click", ()=>{
+.addEventListener("click", async ()=>{
     await saveResponse("let me know");
     modal.classList.remove("hidden");
 
