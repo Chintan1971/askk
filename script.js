@@ -18,7 +18,7 @@ const buttons = document.querySelectorAll(".choice");
 
 buttons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
 
         const parent = button.parentElement;
 
