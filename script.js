@@ -88,7 +88,7 @@ closeModal.onclick = () => {
 document
 .getElementById("yesBtn")
 .addEventListener("click", ()=>{
-
+    await saveResponse("Yes");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="❤️ Yay!";
@@ -121,7 +121,7 @@ document
 document
 .getElementById("laterBtn")
 .addEventListener("click", ()=>{
-
+    await saveResponse("Later");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="😊 Sounds good";
@@ -155,7 +155,7 @@ document
 document
 .getElementById("knowBtn")
 .addEventListener("click", ()=>{
-
+    await saveResponse("let me know");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="🙂 Thank you";
@@ -218,9 +218,6 @@ function createPiece(){
     };
 
 }
-saveResponse("Yes");
-saveResponse("Maybe");
-saveResponse("Later");
 
 function startConfetti(){
 
