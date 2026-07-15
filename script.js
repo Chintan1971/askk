@@ -88,7 +88,7 @@ closeModal.onclick = () => {
 document
 .getElementById("yesBtn")
 .addEventListener("click", async ()=>{
-    await saveResponse("Yes");
+    saveResponse("Yes");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="❤️ Yay!";
@@ -121,7 +121,7 @@ document
 document
 .getElementById("laterBtn")
 .addEventListener("click", async ()=>{
-    await saveResponse("Later");
+    saveResponse("Later");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="😊 Sounds good";
@@ -155,7 +155,7 @@ document
 document
 .getElementById("knowBtn")
 .addEventListener("click", async ()=>{
-    await saveResponse("let me know");
+    saveResponse("let me know");
     modal.classList.remove("hidden");
 
     modalTitle.innerHTML="🙂 Thank you";
@@ -288,24 +288,24 @@ function animateConfetti(){
 }
 async function saveResponse(response){
 
-    await fetch(GOOGLE_SCRIPT_URL,{
+    try {
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain"
+            },
+            body: JSON.stringify({
+                response: response,
+                day: selections.day,
+                meal: selections.meal,
+                food: selections.food,
+                area: selections.area
+            })
+        });
 
-        method:"POST",
-
-        body:JSON.stringify({
-
-            response:response,
-
-            day:selections.day,
-
-            meal:selections.meal,
-
-            food:selections.food,
-
-            area:selections.area
-
-        })
-
-    });
+    } catch (err) {
+        console.error(err);
+    }
 
 }
