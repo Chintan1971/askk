@@ -92,7 +92,7 @@ document
     saveResponse("Yes");
     modal.classList.remove("hidden");
 
-    modalTitle.innerHTML="❤️ Yay!";
+    modalTitle.innerHTML="Yay!";
 
     modalMessage.innerHTML=`
 
